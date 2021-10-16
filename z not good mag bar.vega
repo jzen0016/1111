@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": { "url": "https://raw.githubusercontent.com/jzen0016/1111/main/earthquake.csv"},
+    "width": 80,
+    "mark": "bar",
+    "encoding": {
+      "column": {
+        "field": "mag", "type": "ordinal",
+        "header": {"orient": "bottom"}
+      },
+      "y": {
+        "aggregate": "count", "field": "mag",
+        "title": "numbers of earthquake",
+        "axis": {"grid": false}
+      },
+      "x": {
+        "field": "magnitude_type",
+        "axis": null
+      },
+      "color": {
+        "field": "magnitude_type",
+        "type": "nominal"
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {"domainWidth": 1}
+    }
+  }
